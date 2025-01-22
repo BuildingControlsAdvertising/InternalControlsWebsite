@@ -30,8 +30,26 @@
             padding: 15px 20px;
             font-weight: bold;
         }
-        nav a:hover {
-            background: #1ABC9C;
+        nav .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495E;
+            min-width: 200px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            z-index: 1;
+        }
+        nav .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+        }
+        nav .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             padding: 20px;
@@ -79,7 +97,12 @@
     <nav>
         <a href="#home">Home</a>
         <a href="#services">Services</a>
-        <a href="offboarding.html">Terminations Offboarding Control</a>
+        <div class="dropdown">
+            <a href="#controls">Controls &#9662;</a>
+            <div class="dropdown-content">
+                <a href="offboarding.html">Terminations Offboarding Control</a>
+            </div>
+        </div>
         <a href="#contact">Contact</a>
     </nav>
     <section class="hero">
@@ -110,4 +133,3 @@
     </footer>
 </body>
 </html>
-
